@@ -1,5 +1,5 @@
 <?php
-require_once ("./db/connection.php")
+require_once ("../db/connection.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@ require_once ("./db/connection.php")
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./views/user.php">USER</a>
+            <a class="nav-link active" aria-current="page" href="#">USER</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="#">EMPLOYÉS</a>
@@ -45,59 +45,35 @@ require_once ("./db/connection.php")
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header text-white bg-dark">
-        <h5 class="modal-title text-center" id="exampleModalLabel">FORMULAIRE NOUVEAU EMPLOYÉ</h5>
+        <h5 class="modal-title text-center" id="exampleModalLabel">FORMULAIRE NOUVEL UTILISATEUR</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="../../app/inserUsers.php" method="POST">
+      <form action="../controller/user/inserUser.php" method="POST">
         <div class="modal-body">
         <div class="mb-3">
             <div class="form-group">
                 
-                <input type="text" class="form-control" autocomplete="off" required="required" autofocus name="name" placeholder="Saisissez le nom complet">
+                <input type="text" class="form-control" autocomplete="off" required="required" autofocus name="Nom" placeholder="Saisissez le nom complet">
             </div>
         </div>
         <div class="mb-3">
             <div class="form-group">
                 
-                <input type="text" class="form-control" autocomplete="off" required="required" autofocus name="position" placeholder="Saisissez la fonction de l'agent">
+                <input type="text" class="form-control" autocomplete="off" required="required" autofocus name="Post_nom" placeholder="Saisissez la fonction de l'agent">
             </div>
         </div>
         <div class="mb-3">
             <div class="form-group">
                 
-                <input type="text" class="form-control" autocomplete="off" required="required" autofocus name="bureau" placeholder="Saisissez la bureau de l'agent">
+                <input type="text" class="form-control" autocomplete="off" required="required" autofocus name="Nom_utilisateur" placeholder="Saisissez la bureau de l'agent">
             </div>
         </div>
         <div class="mb-3">
             <div class="form-group">
                 
-                <input type="text" class="form-control" autocomplete="off" required="required" autofocus name="age" placeholder="Saisissez l'age de l'agent">
+                <input type="Password" class="form-control" autocomplete="off" required="required" autofocus name="Password" placeholder="Saisissez le mot de passe">
             </div>
-        </div>
-        <div class="mb-3">
-            <div class="mb-3">
-                <div class="form-group">
-                  
-                  <select  class="form-control" name="sexe"> 
-                    <option selected>Choisissez le sexe</option>
-                    <option value="M">Masculin</option>
-                    <option value="F">Féminin</option>
-                  </select>
-              </div>
-            </div>
-            <div class="form-group">
-                
-                <input type="date" class="form-control" autocomplete="off" required="required" autofocus name="startDate" placeholder="Saisissez la date de début">
-            </div>
-        </div>
-        <div class="mb-3">
-            <div class="form-group">
-                
-                <input type="number" class="form-control" autocomplete="off" required="required" autofocus name="salary" placeholder="Saisissez le saliare">
-            </div>
-        </div>
-
-        </div>
+        </div>  
         <div class="modal-footer">
           <button type="button" class="btn btn-sm btn-outline-danger my-2 my-sm-0" data-dismiss="modal">Cancel</button>
           <button type="submit" name="ok"class="btn btn-sm btn-outline-success my-2 my-sm-0">Create</button>
@@ -111,7 +87,7 @@ require_once ("./db/connection.php")
 
 
 <div class="container">
-    <h2 class="text-center">LISTE DE TRAVAILLEUR</h2>
+    <h2 class="text-center">LISTE D'UTILISATEURS'</h2>
     <!-- Button trigger modal -->
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left:85%">
